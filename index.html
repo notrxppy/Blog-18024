@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Devices - Dark Theme</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🌐 Network Devices</h1>
+            <p>Understanding how networks work in the digital age</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- INTRO SECTION -->
+        <section class="section">
+            <h2>🔗 What is a Network?</h2>
+            <p>
+                A computer network is a group of devices connected together to share information.  
+                Think of it like a digital city where:
+            </p>
+            <ul>
+                <li><b>Devices</b> are houses and buildings</li>
+                <li><b>Cables and WiFi</b> are the roads</li>
+                <li><b>Routers</b> are traffic police controlling paths</li>
+                <li><b>Switches</b> are smart intersections</li>
+                <li><b>Servers</b> are important offices providing services</li>
+            </ul>
+
+            <div class="image-container">
+                <img src="https://www.cignait.com/wp-content/uploads/2022/12/NETWORK-INFRASTRUCTURE.jpg" alt="Network Infrastructure">
+                <p class="image-caption">A simplified view of network infrastructure</p>
+            </div>
+        </section>
+
+        <!-- DEVICES SECTION -->
+        <section class="section">
+            <h2>📡 Core Network Devices Explained</h2>
+
+            <!-- ROUTER -->
+            <div class="device-card">
+                <h3 onclick="toggleInfo('router')">1. Router 🚦 – The Traffic Police of the Internet</h3>
+                <div class="device-info" id="router">
+                    <div class="image-container">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfe2CPME55X2bl5jFd8eM_b83Ja9T-bidG5JpcqKetB-F1wGKZtwRXhu5T&s=10" alt="Router">
+                    </div>
+                    <p>
+                        A router connects multiple networks together (for example: your home network 
+                        and your ISP).  
+                    </p>
+                    <b>What it does:</b>
+                    <ul>
+                        <li>Chooses the <b>best path</b> for data</li>
+                        <li>Assigns <b>IP addresses</b> to devices</li>
+                        <li>Controls traffic to prevent congestion</li>
+                        <li>Connects WiFi and wired networks</li>
+                    </ul>
+                    <b>Example:</b>  
+                    <p>Your phone → Router → Internet</p>
+                </div>
+            </div>
+
+            <!-- SWITCH -->
+            <div class="device-card">
+                <h3 onclick="toggleInfo('switch')">2. Switch 🔗 – The Smart Intersections</h3>
+                <div class="device-info" id="switch">
+                    <div class="image-container">
+                        <img src="https://www.cisco.com/content/dam/cisco-cdc/site/images/legacy/assets/swa/img/anchor-info/what-is-an-ethernet-switch-628x353.png" alt="Network Switch">
+                    </div>
+                    <p>
+                        A switch connects devices inside the same building or office.  
+                        It uses <b>MAC addresses</b> to send data to the correct device.
+                    </p>
+                    <b>What it does:</b>
+                    <ul>
+                        <li>Sends data only to the intended device</li>
+                        <li>Reduces unnecessary network traffic</li>
+                        <li>Connects PCs, printers, servers, CCTV, etc.</li>
+                    </ul>
+                    <b>Example:</b>
+                    <p>PC → Switch → Office Network</p>
+                </div>
+            </div>
+
+            <!-- MODEM -->
+            <div class="device-card">
+                <h3 onclick="toggleInfo('modem')">3. Modem 📞 – Converts Signals</h3>
+                <div class="device-info" id="modem">
+                    <div class="image-container">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4Yq1v0IbF7liCO_9tk1_jppt82-VRDT5RTtScIoTLNXqfMGOb1tTSzhyu&s=10" alt="Modem">
+                    </div>
+                    <p>
+                        A modem converts signals:
+                    </p>
+                    <ul>
+                        <li><b>Digital → Analog</b> (uploads)</li>
+                        <li><b>Analog → Digital</b> (downloads)</li>
+                    </ul>
+                    <p>Without a modem, the internet cannot work over telephone or cable lines.</p>
+                </div>
+            </div>
+
+            <!-- ACCESS POINT -->
+            <div class="device-card">
+                <h3 onclick="toggleInfo('ap')">4. Access Point 📶 – Wireless Expansion</h3>
+                <div class="device-info" id="ap">
+                    <div class="image-container">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXbkkTNe7KNBDATG94wmK8Pn4TAZRaDfxiJ80vAYdwl6dCGNvX2MY_MbQ&s=10" alt="Access Point">
+                    </div>
+                    <p>
+                        An access point extends WiFi range in large buildings like schools, malls,
+                        offices, or hotels.
+                    </p>
+                    <b>What it does:</b>
+                    <ul>
+                        <li>Creates wireless networks</li>
+                        <li>Connects many users at once</li>
+                        <li>Improves WiFi coverage</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- HUB -->
+            <div class="device-card">
+                <h3 onclick="toggleInfo('hub')">5. Hub 🧱 – The Old-Style Device</h3>
+                <div class="device-info" id="hub">
+                    <div class="image-container">
+                        <img src="https://images.shiksha.com/mediadata/ugcDocuments/images/wordpressImages/2022_09_Understanding-Break-Statement-in-C-23.jpg" alt="Network Hub">
+                    </div>
+                    <p>
+                        A hub sends incoming data to <b>all connected devices</b>, even if only 
+                        one device needs it.
+                    </p>
+                    <p><b>Disadvantage:</b>  
+                        Causes network congestion and security risks.  
+                        This is why hubs are replaced by switches.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FIREWALL -->
+            <div class="device-card">
+                <h3 onclick="toggleInfo('firewall')">6. Firewall 🔥 – Protects the Network</h3>
+                <div class="device-info" id="firewall">
+                    <p>
+                        A firewall filters good and bad traffic.  
+                        It protects your network from:
+                    </p>
+                    <ul>
+                        <li>Hackers</li>
+                        <li>Viruses & malware</li>
+                        <li>Unauthorized access</li>
+                    </ul>
+                    <p>
+                        Firewalls can be software (Windows Firewall) or hardware (network appliances).
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CABLES SECTION -->
+        <section class="section">
+            <h2>🧵 Types of Network Cables</h2>
+
+            <h3>1. Ethernet (Copper) Cable</h3>
+            <p>Used in homes and offices for LAN connections.</p>
+
+            <div class="carousel-container">
+                <div class="carousel">
+                    <img class="active" src="https://c8.alamy.com/comp/KE15NX/ethernet-cables-connected-to-internet-switch-KE15NX.jpg" alt="Ethernet Cables">
+                    <img src="https://readytogocables.com/wp-content/uploads/2022/05/how-to-differentiate-the-types-of-network-cables-readytogocables.png" alt="Network Cable Types">
+                    <img src="https://instrumentationtools.com/wp-content/uploads/2017/07/instrumentationtools.com_optical-fibers-terminations.png" alt="Fiber Optic Cables">
+
+                    <button class="prev" onclick="moveSlide(-1)">❮</button>
+                    <button class="next" onclick="moveSlide(1)">❯</button>
+                </div>
+                <div class="carousel-indicators">
+                    <span class="active" onclick="goToSlide(0)"></span>
+                    <span onclick="goToSlide(1)"></span>
+                    <span onclick="goToSlide(2)"></span>
+                </div>
+            </div>
+
+            <h3>2. Fiber Optic Cable</h3>
+            <p>
+                The fastest cable type. Uses <b>light pulses</b> to transmit data at speeds
+                up to several terabits per second.
+            </p>
+            <ul>
+                <li>Used in ISPs, data centers, undersea cables</li>
+                <li>No electrical interference</li>
+                <li>Long-distance communication</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Network Devices – Made by pratham</p>
+    </footer>
+
+    <div class="back-to-top" id="backToTop">↑</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
